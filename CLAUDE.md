@@ -12,7 +12,8 @@ Visualizador leve de arquivos `.html` locais como app desktop no Windows. Abre o
 - `Program.cs`: todo o app (um arquivo só, `Main` com `[STAThread]`).
 - `HtmlViewer.csproj`: projeto. Contém target `RemoveWebView2Wpf` (ver Regras).
 - `install.ps1`: compila, instala e registra no "Abrir com". `-Uninstall` desfaz tudo.
-- `.gitignore`: `bin/`, `obj/`, `dist/`.
+- `.gitignore`: `bin/`, `obj/`.
+- `dist/`: builds portáteis **versionados no git** (links de download do README apontam para `dist/portatil-leve` e `dist/portatil-autonomo`). Ao mudar o código, regerar os dois exes antes do commit. Cada rebuild soma ~50 MB ao histórico.
 
 ## Funcionamento
 
@@ -39,7 +40,7 @@ O script **não** define o app padrão: o Windows protege essa escolha (hash em 
 
 O `install.ps1` só serve para aparecer no "Abrir com". O exe funciona sozinho:
 
-- `dotnet publish ... -o .\dist` gera uma pasta portátil (~2 MB, ignorada no git) que pode ser copiada para qualquer lugar.
+- `dotnet publish ... -o .\dist` gera uma pasta portátil (~2 MB, versionada no git) que pode ser copiada para qualquer lugar.
 - **Arrastar** um `.html` sobre o `HtmlViewer.exe`: o arquivo chega em `args[0]`.
 - **Dois cliques** no exe: abre o seletor de arquivo.
 - **"Enviar para"**: atalho do exe em `shell:sendto`. Botão direito no `.html` → Enviar para → HtmlViewer. Não toca no registro.

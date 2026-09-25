@@ -6,6 +6,15 @@ Visualizador leve de arquivos `.html` locais para Windows. Abre o HTML numa jane
 - O título da janela segue o `<title>` da página.
 - `F12` abre o DevTools.
 
+## Download
+
+Exe único, pronto para usar (sem instalar):
+
+- **Autônomo (~47 MB):** [HtmlViewer.exe](https://github.com/jessicascruz/HtmlViewer/raw/main/dist/portatil-autonomo/HtmlViewer.exe). Roda em qualquer Windows 10/11 x64, sem .NET.
+- **Leve (~1,2 MB):** [HtmlViewer.exe](https://github.com/jessicascruz/HtmlViewer/raw/main/dist/portatil-leve/HtmlViewer.exe). Precisa do .NET Desktop Runtime 10.
+
+Na primeira execução, o Windows SmartScreen pode avisar que o app não é reconhecido (o exe não é assinado): clique em "Mais informações" → "Executar assim mesmo". Depois, veja [Uso sem instalar](#uso-sem-instalar).
+
 ## Requisitos
 
 - Windows 10/11 x64
